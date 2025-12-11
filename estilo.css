@@ -44,7 +44,7 @@ img {
 }
 
 a {
-    color: #386886;
+    color: aliceblue;
     display: block;
     background-color: #DBB012;
     margin: auto;
@@ -64,7 +64,7 @@ a {
     max-width: 1000px;
     margin: 40px;
     margin: auto;
-    color: #12DBBC;
+    color: aliceblue;
 }
 
 #d2 {
@@ -74,7 +74,7 @@ a {
     max-width: 1000px;
     margin: 40px;
     margin: auto;
-    color: #12DBBC;
+    color: aliceblue;
 }
 
 #d3 {
@@ -84,7 +84,7 @@ a {
     max-width: 1000px;
     margin: 40px;
     margin: auto;
-    color: #12DBBC;
+    color: aliceblue;
 }
 
 footer {

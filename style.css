@@ -54,7 +54,7 @@ aside > p {
 
 aside {
     background-color: #128EDB;
-    color: #DBB012;
+    color: aliceblue;
     font-weight: bold;
     border-radius: 3px;
     text-indent: 6px;
@@ -66,7 +66,7 @@ aside {
 aside > a {
     background-color: #DBB012;
     border-radius: 50px;
-    color: #128EDB;
+    color: aliceblue;
     padding: 10px;
 }
 
@@ -127,6 +127,6 @@ main abbr {
 }
 
 main a:hover {
-    color: #DBB012;
+    color: aliceblue;
     text-decoration: underline;
 }
