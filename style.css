@@ -79,8 +79,6 @@ footer {
     color: #12DBBC;
     text-indent: 20px;
     text-align: justify;
-    /*margin-top temporário*/
-    margin-top: 73px;
 }
 
 #p {
@@ -100,7 +98,7 @@ footer {
 
 main p#whats {
     background-color: #386886;
-    color: #12DBBC;
+    color: aliceblue;
     padding-bottom: 10px;
     border: 5px solid #386886;
     outline: 8px solid #128EDB;
@@ -108,6 +106,7 @@ main p#whats {
     max-width: 500px;
     min-width: 250px;
     margin: auto;
+    margin-bottom: 40px;
     text-align: justify;
     border-radius: 0px 0px 20px 20px;
 }
