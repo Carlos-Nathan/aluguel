@@ -42,19 +42,14 @@ span {
     padding: 8px;
 }
 
-.pequena {
-    padding: 4.6px;
-}
-
 div {
     min-width: 150px;
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
 }
 
 div  > p#justy {
     text-align: justify;
-    margin-left: 50px;
 }
 
 p {
