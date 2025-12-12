@@ -39,26 +39,17 @@ span {
     min-width: 8px;
     max-width: 10px;
     padding: 5px;
-    margin-top: 10px;
+    padding: 8px;
 }
 
-.pequena {
-    padding: 7.3px;
-    margin-bottom: 20px;
+div {
+    min-width: 150px;
+    max-width: 300px;
+    margin: auto;
 }
 
-#separar {
-    padding-bottom: 4px;
-}
-
-#separa {
-    padding-bottom: 4px;
-    min-height: 5px;
-    max-height: 30px;
-}
-
-.media {
-    padding: 6.9px;
+div  > p#justy {
+    text-align: justify;
 }
 
 p {
