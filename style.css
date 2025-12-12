@@ -53,6 +53,8 @@ span {
 
 #separa {
     padding-bottom: 4px;
+    min-height: 5px;
+    max-height: 30px;
 }
 
 .media {
