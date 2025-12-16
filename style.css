@@ -120,7 +120,7 @@ main p#whats {
     padding-bottom: 10px;
     border: 5px solid #386886;
     outline: 8px solid #128EDB;
-    text-indent: 20px;
+    text-indent: 10px;
     max-width: 500px;
     min-width: 250px;
     margin: auto;
@@ -132,6 +132,10 @@ main p#whats {
 h3 {
     font-family: 'Bebas Neue';
     font-size: 1.8em;
+}
+
+h2, h3 {
+    font-weight: 900;
 }
 
 main abbr > a {
