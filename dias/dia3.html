@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer alugar este dia?</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        a {
+            font-weight: normal;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        div > a:hover {
+            text-decoration: none;
+        }
+
+        div#whatsapp {
+            background-color: rgb(70, 233, 70);
+            background-image: url(../simbolo-whatsapp.jpg);
+            background-size: cover;
+            position: relative;
+            background-position: center center;
+            border-radius: 30px 0px;
+            color: aliceblue;
+            height: 200px;
+            margin: auto;
+            width: 250px;
+        }
+
+        div > p {
+            position: absolute;
+            background-color: rgb(144, 255, 53);
+            border-radius: 10px;
+            text-align: justify;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -70%);
+            width: 200px;
+            font-weight: 700;
+            padding: 5px;
+            text-indent: 20px;
+        }
+
+        div span {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            text-indent: 0px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Você deseja alugar este dia?</h1>
+        <hr>
+    </header>
+    <main>
+        <p>Confirmando: você quer alugar o dia 03/12/2025</p>
+        <p>Se não deseja este dia, clique no botão de voltar a baixo, mas se você deseja este dia, ligue para o responsável</p>
+        <div>
+            <a href="../index.html">⬅Voltar</a>
+        </div>
+        <div id="whatsapp">
+            <p>
+                Whatsapp:
+                <span>(23)11324678-4567</span>
+            </p>
+        </div>
+    </main>
+    <footer>Desenvolvido por Carlos Nathan</footer>
+</body>
+</html>

@@ -58,6 +58,10 @@ a {
     text-align: center;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 #d1 {
     background-color: #355C56;
     border-radius: 20px;
