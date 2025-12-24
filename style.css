@@ -6,18 +6,8 @@
 }
 
 @font-face {
-    font-family: 'Antonio';
-    src: url(Antonio-Bold.ttf);
-}
-
-@font-face {
     font-family: 'Organical';
     src: url(ORGANICAL\ PERSONAL\ USE.ttf) format(truetype);
-}
-
-@font-face {
-    font-family: 'Blazed';
-    src: url(Blazed.ttf) format(truetype);
 }
 
 body {
