@@ -43,7 +43,7 @@ img {
     margin: 2px;
 }
 
-a {
+a.descreto {
     color: aliceblue;
     display: block;
     background-color: #DBB012;
@@ -58,7 +58,20 @@ a {
     text-align: center;
 }
 
-a:hover {
+a.descreto:hover {
+    text-decoration: none;
+    background-color: #c9a628;
+    color: rgb(231, 230, 230);
+}
+
+a.descreto:active {
+    box-shadow: inset -1px -1px 3px 3px rgb(88, 87, 87);
+    color: rgb(209, 209, 209);
+    background-image: linear-gradient(to left, #bda037 1%, #c9a628);
+}
+
+a {
+    color: #12DBBC;
     text-decoration: none;
 }
 

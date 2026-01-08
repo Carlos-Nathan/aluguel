@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeiro</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        table {
+            margin-bottom: 40px;
+        }
+
+        td, th {
+            font-weight: bold;
+            font-size: 17px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #12DBBC;
+        }
+
+        th.dias {
+            padding: 0px 5px;
+            border-bottom: 3px solid #355C56;
+        }
+
+        td:hover {
+            background-color: rgba(255, 255, 255, 0.699);
+            border: 0px solid #12DBBC;
+            border-radius: 5px;
+            transition-duration: 0.7s;
+        }
+
+        td.fantasma:hover {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        td > a {
+            text-decoration: none;
+            color: #386886;
+        }
+
+        td > a:hover {
+            color: #386886;
+            text-decoration: none;
+        }
+
+        td.domingo > a {
+            color: rgb(216, 0, 0);
+            font-weight: normal;
+        }
+
+        td.domingo:hover {
+            color: red;
+        }
+
+        td.alugado > a {
+            color: darkgray;
+        }
+
+        td.alugado > a:hover {
+            color: darkgray;
+            
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        span > a {
+            background-color: #DBB012;
+            padding: 10px 40px;
+            text-decoration: none;
+            color: aliceblue;
+            border-radius: 50px;
+        }
+
+        span > a:hover {
+            text-decoration: none;
+            background-color: #c9a628;
+            color: rgb(231, 230, 230);
+        }
+
+        span > a:active {
+            box-shadow: inset -1px -1px 3px 3px rgb(73, 71, 71);
+            background-image: linear-gradient(to left, #bda037 1%, #c9a628);
+             color: rgb(209, 209, 209);
+        }
+
+        div {
+            margin-bottom: 60px;
+        }
+    </style>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Janeiro</h1>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <p>Selecione um dia:</p>
+            <table>
+                <caption>Janeiro</caption>
+                    <thead>
+                        <tr>
+                            <th class="dias domingo">D</th>
+                            <th class="dias">S</th>
+                            <th class="dias">T</th>
+                            <th class="dias">Q</th>
+                            <th class="dias">Q</th>
+                            <th class="dias">S</th>
+                            <th class="dias">S</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="calendário">
+                            <td class="fantasma"></td>
+                            <td class="fantasma"></td>
+                            <td class="fantasma"></td>
+                            <td class="fantasma"></td>
+                            <td class="day" data-dia="1"><a href="../dias/dia1.html">01</a></td>
+                            <td class="day" data-dia="2"><a href="../dias/dia2.html">02</a></td>
+                            <td class="day"><a href="../dias/dia3.html">03</a></td>
+                        </tr>
+                        <tr>
+                            <td class="day"><a href="../dias/dia4.html">04</a></td>
+                            <td class="day"><a href="../dias/dia5.html">05</a></td>
+                            <td class="day"><a href="../dias/dia6.html">06</a></td>
+                            <td class="day"><a href="../dias/dia7.html">07</a></td>
+                            <td class="day"><a href="../dias/dia8.html">08</a></td>
+                            <td class="day"><a href="../dias/dia9.html">09</a></td>
+                            <td class="day"><a href="../dias/dia10.html">10</a></td>
+                        </tr>
+                        <tr>
+                            <td class="domingo class="day""><a href="../dias/dia11.html">11</a></td>
+                            <td class="day"><a href="../dias/dia12.html">12</a></td>
+                            <td class="day"><a href="../dias/dia13.html">13</a></td>
+                            <td class="day"><a href="../dias/dia14.html">14</a></td>
+                            <td class="day"><a href="../dias/dia15.html">15</a></td>
+                            <td class="day"><a href="../dias/dia16.html">16</a></td>
+                            <td class="day"><a href="../dias/dia17.html">17</a></td>
+                        </tr>
+                        <tr>
+                            <td class="domingo day"><a href="dias/dia18.html" class="day">18</a></td>
+                            <td class="day"><a href="../dias/dia19.html">19</a></td>
+                            <td class="day"><a href="../dias/dia20.html">20</a></td>
+                            <td class="day"><a href="../dias/dia21.html">21</a></td>
+                            <td class="day"><a href="../dias/dia22.html">22</a></td>
+                            <td class="day"><a href="../dias/dia23.html">23</a></td>
+                            <td class="day"><a href="../dias/dia24.html">24</a></td>
+                        </tr>
+                        <tr>
+                            <td class="domingo day"><a href="../dias/dia25.html">25</a></td>
+                            <td class="day"><a href="../dias/dia26.html">26</a></td>
+                            <td class="day"><a href="../dias/dia27.html">27</a></td>
+                            <td class="day"><a href="../dias/dia28.html">28</a></td>
+                            <td class="day"><a href="../dias/dia29.html">29</a></td>
+                            <td class="day"><a href="../dias/dia30.html">30</a></td>
+                            <td class="day"><a href="../dias/dia31.html">31</a></td>
+                        </tr>
+                    </tbody>
+            </table>
+            <div>
+                <img src="" alt="imagem">
+                <img src="" alt="imagem">
+            </div>
+            <div>
+                <span><a href="../index.html">⬅Voltar</a></span>
+            </div>
+        </section>
+    </main>
+    <footer>Desenvolvido por Carlos Nathan</footer>
+</body>
+</html>
