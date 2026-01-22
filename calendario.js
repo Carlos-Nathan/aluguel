@@ -1,4 +1,4 @@
-// começo JS
+// Começo do código JS
 document.addEventListener('DOMContentLoaded', () => {
 
   const hoje = new Date();
