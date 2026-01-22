@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Gerador de Calendários</title>
+<style>
+body {
+    font-family: monospace;
+    white-space: pre;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<script>
+const ano = new Date().getFullYear();
+
+const meses = [
+  { nome: "Janeiro", dias: 31 },
+  { nome: "Fevereiro", dias: 28 },
+  { nome: "Março", dias: 31 },
+  { nome: "Abril", dias: 30 },
+  { nome: "Maio", dias: 31 },
+  { nome: "Junho", dias: 30 },
+  { nome: "Julho", dias: 31 },
+  { nome: "Agosto", dias: 31 },
+  { nome: "Setembro", dias: 30 },
+  { nome: "Outubro", dias: 31 },
+  { nome: "Novembro", dias: 30 },
+  { nome: "Dezembro", dias: 31 }
+];
+
+let output = "";
+
+meses.forEach((mes, index) => {
+  output += `<!-- ================= ${mes.nome.toUpperCase()} ================= -->\n`;
+  output += `<table>\n`;
+  output += `<caption>${mes.nome}</caption>\n`;
+  output += `<thead>\n<tr>\n`;
+  output += `  <th class="dias domingo">D</th>\n`;
+  output += `  <th class="dias">S</th>\n`;
+  output += `  <th class="dias">T</th>\n`;
+  output += `  <th class="dias">Q</th>\n`;
+  output += `  <th class="dias">Q</th>\n`;
+  output += `  <th class="dias">S</th>\n`;
+  output += `  <th class="dias">S</th>\n`;
+  output += `</tr>\n</thead>\n<tbody>\n<tr>\n`;
+
+  const primeiroDia = new Date(ano, index, 1).getDay(); // 0 = domingo
+  let coluna = 0;
+
+  // 👻 Fantasmas antes do dia 1
+  for (let i = 0; i < primeiroDia; i++) {
+    output += `  <td class="fantasma"></td>\n`;
+    coluna++;
+  }
+
+  // 🔢 Dias do mês
+  for (let d = 1; d <= mes.dias; d++) {
+    if (coluna === 7) {
+      output += `</tr>\n<tr>\n`;
+      coluna = 0;
+    }
+
+    const diaTexto = String(d).padStart(2, "0");
+    const domingoClass = coluna === 0 ? " domingo" : "";
+
+    output += `  <td class="day${domingoClass}"><a href="../dias/dia.html?dia=${d}&mes=${index + 1}">${diaTexto}</a></td>\n`;
+
+    coluna++;
+  }
+
+  // 👻 Fantasmas depois do último dia
+  while (coluna < 7) {
+    output += `  <td class="fantasma"></td>\n`;
+    coluna++;
+  }
+
+  output += `</tr>\n</tbody>\n</table>\n\n`;
+});
+
+document.body.textContent = output;
+</script>
+</body>
+</html>

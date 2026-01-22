@@ -41,9 +41,9 @@ td {
     font-weight: bold;
     font-size: 17px;
     border: 1px dashed #355C56;
-    width: 35px;
-    height: 35px;
-    padding: 10px;
+    height: 40px;
+    padding-left: 1vw;
+    padding-right: 1vw;
     text-align: center;
 }
 
@@ -51,6 +51,18 @@ caption {
     border-top: 2px solid #355C56;
     border-left: 2px solid #355C56;
     border-right: 2px solid #355C56;
+}
+
+img {
+    border: 3px solid #355C56;
+    border-collapse: collapse;
+    height: 25vh;
+    width: 20vw;
+}
+
+div.img {
+    margin: 0px;
+    padding: 0px;
 }
 
 td:hover {
@@ -83,7 +95,6 @@ td.domingo > a {
 td.domingo:hover {
     color: red;
 }
-
 
 p {
     font-size: 20px;
@@ -142,9 +153,17 @@ span#p {
 
 table {
     margin: auto;
-    border: 3px solid #355C56;
     border-collapse: collapse;
     text-align: center;
+}
+
+table#meses {
+    width: 50vw;
+    height: 150px;
+}
+
+tbody, thead {
+    border: 3px solid #355C56;
 }
 
 main p#whats {
@@ -161,9 +180,8 @@ main p#whats {
     color: aliceblue;
     border: 5px solid #386886;
     outline: 8px solid #128EDB;
-    text-indent: 15px;
+    min-width: 120px;
     max-width: 500px;
-    min-width: 150px;
     margin: auto;
     margin-bottom: 40px;
     text-align: justify;
@@ -188,10 +206,11 @@ p#whats > span {
     left: 50%;
     top: 50%;
     height: 100px;
-    padding-top: 10px;
+    padding: 10px;
     border-radius: 10px;
     background-color: #386886;
-    min-width: 360px;
+    min-width: 250px;
+    max-width: 400px;
     transform: translate(-45%, -50%);
 }
 

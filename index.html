@@ -8,48 +8,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- aprimorar: 
-     fazer links nos dias do calendário;
-     achar uma fonte melhor;
-     tirar foto para as imagens -->
     <header>
         <h1>Aluguel de Chácara</h1>
         <hr>
     </header>
     <main>
             <p>Selecione um mês:</p>
-                <table>
+                <table id="meses">
                     <caption id="ano">&nbsp;</caption>
-                        <tr>
-                            <td><a href="meses/janeiro.html">Janeiro</a></td>
-                            <td><a href="meses/fevereiro.html">Fevereiro</a></td>
-                            <td><a href="meses/março.html">Março</a></td>
-                            <td><a href="meses/abril.html">Abril</a></td>
-                            <td><a href="meses/maio.html">Maio</a></td>
-                             <td><a href="meses/junho.html">junho</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="meses/julho.html">Julho</a></td>
-                            <td><a href="meses/agosto.html">Agosto</a></td>
-                            <td><a href="meses/setembro.html">Setembro</a></td>
-                            <td><a href="meses/outubro.html">Outubro</a></td>
-                            <td><a href="meses/novembro.html">Novembro</a></td>
-                            <td><a href="meses/dezembro.html">Dezembro</a></td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td><a href="meses/janeiro.html">Janeiro</a></td>
+                                <td><a href="meses/fevereiro.html">Fevereiro</a></td>
+                                <td><a href="meses/março.html">Março</a></td>
+                                <td><a href="meses/abril.html">Abril</a></td>
+                                <td><a href="meses/maio.html">Maio</a></td>
+                                 <td><a href="meses/junho.html">junho</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="meses/julho.html">Julho</a></td>
+                                <td><a href="meses/agosto.html">Agosto</a></td>
+                                <td><a href="meses/setembro.html">Setembro</a></td>
+                                <td><a href="meses/outubro.html">Outubro</a></td>
+                                <td><a href="meses/novembro.html">Novembro</a></td>
+                                <td><a href="meses/dezembro.html">Dezembro</a></td>
+                            </tr>
+                        </tbody>
                 </table>
                 <div id="atencao">
                     <h3>ATENÇÃO:</h3>
-                    <p>Se você quiser alugar dois ou mais dias, o site não vai confirmar os dois, apenas um, pois o site não tem páginas especiais para isto, se isto for o desejado apenas fale com o responsável. ESTAMOS ATUALIZANDO O SITE, ALGUNS RECURSOS NÃO ESTÃO DISPONIVEIS, MAS VOCÊ PODE ALUGAR A CHÁCARA</p>
+                    <p>Se você quiser alugar dois ou mais dias, o site não vai confirmar os dois, apenas um, pois o site não tem páginas especiais para isto, se isto for o desejado apenas clique no botão de alugar dos dois dias desejados depois de falar com responsável.</p>
                 </div>
         <h2>O melhor lugar do mundo espera você</h2>
-        <div>
-            <img src="" alt="Imagem |" class="normal">
-            <img src="" alt="Imagem |" class="normal">
+        <div class="img">
+            <img src="imagem-casamento3.jpeg" alt="Imagem da Chácara" class="normal">
+            <img src="imagem-chacara3.jpeg" alt="Imagem da Chácara" class="normal">
         </div>
-        
-        <div>
-            <br><img src="" alt="imagem |" class="normal">
-            <img src="" alt="Imagem |" class="normal" id="es">
+        <div class="img">
+            <br><img src="imagem-piscina2.jpeg" alt="imagem da Chácara" class="normal">
+            <img src="imagem-chacara1.jpeg" alt="Imagem da Chácara" class="normal" id="es">
         </div>
     <aside>
         <p>Chácara no Ponunduva, com piscina, grama, luzes de balada e mais!</p>
@@ -67,6 +64,7 @@
     <footer>
         Desenvolvido por <a href="https://github.com/Carlos-Nathan" target="_blank">Carlos Nathan</a>
     </footer>
-    <script src="mes.js"></script>
+    <script src="ano.js"></script>
+    <script src="dias.js"></script>
 </body>
 </html>

@@ -3,88 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quer alugar este dia?</title>
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Abril</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../estilo.css">
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        p {
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        a {
-            font-weight: normal;
-            margin-bottom: 40px;
-            margin-top: 40px;
-        }
-
-        div > a:hover {
-            text-decoration: none;
-        }
-
-        div#whatsapp {
-            background-color: rgb(70, 233, 70);
-            background-image: url(../simbolo-whatsapp.jpg);
-            background-size: cover;
-            position: relative;
-            background-position: center center;
-            border-radius: 30px 0px;
-            color: aliceblue;
-            height: 200px;
-            margin: auto;
-            width: 250px;
-        }
-
-        div > p {
-            position: absolute;
-            background-color: rgb(144, 255, 53);
-            border-radius: 10px;
-            text-align: justify;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -70%);
-            width: 200px;
-            font-weight: 700;
-            padding: 5px;
-            text-indent: 20px;
-        }
-
-        div span {
-            display: block;
-            padding-top: 5px;
-            padding-bottom: 10px;
-            text-indent: 0px;
+        td, th {
+            font-weight: bold;
+            font-size: 17px;
+            width: 35px;
+            height: 35px;
             text-align: center;
         }
 
-        footer {
-            margin-top: 40px;
+        td {
+            border: 1px solid #12DBBC;
+        }
+
+        th.dias {
+            padding: 0px 5px;
+            border-bottom: 3px solid #355C56;
+        }
+
+        td:hover {
+            background-color: rgba(255, 255, 255, 0.699);
+            border: 0px solid #12DBBC;
+            border-radius: 5px;
+            transition-duration: 0.7s;
+        }
+
+        td.fantasma:hover {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        td > a {
+            text-decoration: none;
+            color: #386886;
+        }
+
+        td > a:hover {
+            color: #386886;
+            text-decoration: none;
+        }
+
+        td.domingo > a {
+            color: rgb(216, 0, 0);
+            font-weight: normal;
+        }
+
+        td.domingo:hover {
+            color: red;
+        }
+
+        table {
+            margin-bottom: 20px;
+            min-width: 150px;
+            max-width: 500px;
+            min-height: 150px;
+            max-height: 300px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        span > a {
+            background-color: #DBB012;
+            padding: 10px 40px;
+            text-decoration: none;
+            color: aliceblue;
+            border-radius: 50px;
+        }
+
+        span > a:hover {
+            text-decoration: none;
+            background-color: #c9a628;
+            color: rgb(231, 230, 230);
+        }
+
+        span > a:active {
+            box-shadow: inset -1px -1px 3px 3px rgb(73, 71, 71);
+            background-image: linear-gradient(to left, #bda037 1%, #c9a628);
+             color: rgb(209, 209, 209);
+        }
+
+        div {
+            margin-bottom: 60px;
         }
     </style>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Você deseja alugar este dia?</h1>
+        <h1>Abril</h1>
         <hr>
     </header>
     <main>
-        <p>Confirmando: você quer alugar o dia 04/12/2025</p>
-        <p>Se não deseja este dia, clique no botão de voltar a baixo, mas se você deseja este dia, ligue para o responsável</p>
-        <div>
-            <a href="../index.html">⬅Voltar</a>
-        </div>
-        <div id="whatsapp">
-            <p>
-                Whatsapp:
-                <span>(23)11324678-4567</span>
-            </p>
-        </div>
+        <section>
+            <p>Selecione um dia:</p>
+            <table>
+<caption>Abril</caption>
+<thead>
+<tr>
+  <th class="dias domingo">D</th>
+  <th class="dias">S</th>
+  <th class="dias">T</th>
+  <th class="dias">Q</th>
+  <th class="dias">Q</th>
+  <th class="dias">S</th>
+  <th class="dias">S</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="fantasma"></td>
+  <td class="fantasma"></td>
+  <td class="fantasma"></td>
+  <td class="day"><a href="../dias/dia.html?dia=1&mes=4">01</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=2&mes=4">02</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=3&mes=4">03</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=4&mes=4">04</a></td>
+</tr>
+<tr>
+  <td class="day domingo"><a href="../dias/dia.html?dia=5&mes=4">05</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=6&mes=4">06</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=7&mes=4">07</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=8&mes=4">08</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=9&mes=4">09</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=10&mes=4">10</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=11&mes=4">11</a></td>
+</tr>
+<tr>
+  <td class="day domingo"><a href="../dias/dia.html?dia=12&mes=4">12</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=13&mes=4">13</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=14&mes=4">14</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=15&mes=4">15</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=16&mes=4">16</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=17&mes=4">17</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=18&mes=4">18</a></td>
+</tr>
+<tr>
+  <td class="day domingo"><a href="../dias/dia.html?dia=19&mes=4">19</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=20&mes=4">20</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=21&mes=4">21</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=22&mes=4">22</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=23&mes=4">23</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=24&mes=4">24</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=25&mes=4">25</a></td>
+</tr>
+<tr>
+  <td class="day domingo"><a href="../dias/dia.html?dia=26&mes=4">26</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=27&mes=4">27</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=28&mes=4">28</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=29&mes=4">29</a></td>
+  <td class="day"><a href="../dias/dia.html?dia=30&mes=4">30</a></td>
+  <td class="fantasma"></td>
+  <td class="fantasma"></td>
+</tr>
+</tbody>
+</table>
+            <div>
+                <img src="../imagem-chacara2.jpeg" alt="Imagem da Chácara">
+                <img src="../imagem-piscina1.jpeg" alt="imagem">
+            </div>
+            <div>
+                <span><a href="../index.html">⬅Voltar</a></span>
+            </div>
+        </section>
     </main>
     <footer>Desenvolvido por Carlos Nathan</footer>
+    <script src="../calendario.js"></script>
 </body>
 </html>
