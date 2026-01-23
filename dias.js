@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const ano = new Date().getFullYear();
+  const anoEl = document.getElementById("ano");
+  if (anoEl) {
+    anoEl.textContent = ano;
+  }
+});
 const params = new URLSearchParams(location.search);
 
 const dia = params.get("dia");

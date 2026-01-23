@@ -44,8 +44,8 @@ td {
     font-size: 17px;
     border: 1px dashed #355C56;
     height: 40px;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 0,5vw;
+    padding-right: 0,5vw;
     text-align: center;
 }
 
@@ -182,8 +182,7 @@ main p#whats {
     color: aliceblue;
     border: 5px solid #386886;
     outline: 8px solid #128EDB;
-    min-width: 120px;
-    max-width: 500px;
+    width: 60vw;
     margin: auto;
     margin-bottom: 40px;
     text-align: justify;
@@ -205,6 +204,7 @@ div#atencao > p {
 
 p#whats > span {
     position: absolute;
+    margin: auto;
     left: 50%;
     top: 50%;
     height: 100px;
