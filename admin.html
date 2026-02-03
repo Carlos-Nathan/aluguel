@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel Admin - Aluguel Chácara S. Sebastião</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { 
+        font-family: Arial, sans-serif;
+        margin: auto;
+        text-align: center;
+    }
+    button { 
+        cursor: pointer; 
+    }
+    li { 
+        margin-bottom: 6px; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Painel Admin</h1>
+
+  <!-- LOGIN -->
+  <div id="login-area">
+    <label>
+      Senha:
+      <input type="password" id="senha" />
+    </label>
+    <button id="btn-login">Entrar</button>
+    <p id="msg-erro" style="color:red; display:none;">Senha incorreta!</p>
+  </div>
+
+  <!-- ADMIN -->
+  <div id="admin-area" style="display:none;">
+    <h2>Reservas Atuais</h2>
+    <button id="btn-resetar">Resetar Todas as Reservas</button>
+    <ul id="lista-reservas"></ul>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      deleteDoc,
+      doc,
+      onSnapshot,
+      getDocs
+    } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-firestore.js";
+
+    /* ================= FIREBASE ================= */
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCQY-qMTeG6c93oBFNiBrf02AVB6UA8hR8",
+      authDomain: "aluguel-chacara-saosebastiao.firebaseapp.com",
+      projectId: "aluguel-chacara-saosebastiao",
+      storageBucket: "aluguel-chacara-saosebastiao.firebasestorage.app",
+      messagingSenderId: "444252026773",
+      appId: "1:444252026773:web:5dca5d809baf0b0cc4a89c"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const reservasRef = collection(db, "diasReservados");
+
+    /* ================= ELEMENTOS ================= */
+
+    const senhaAdmin = "aluguel-chacarasaosebastiao@cn224488";
+
+    const loginArea = document.getElementById("login-area");
+    const adminArea = document.getElementById("admin-area");
+    const msgErro = document.getElementById("msg-erro");
+    const listaReservas = document.getElementById("lista-reservas");
+    const btnLogin = document.getElementById("btn-login");
+    const btnResetar = document.getElementById("btn-resetar");
+
+    let unsubscribe = null;
+
+    /* ================= LISTA EM TEMPO REAL ================= */
+
+    function iniciarListenerReservas() {
+      if (unsubscribe) unsubscribe();
+
+      unsubscribe = onSnapshot(reservasRef, snapshot => {
+        listaReservas.innerHTML = "";
+
+        if (snapshot.empty) {
+          listaReservas.innerHTML = "<li>Nenhuma reserva.</li>";
+          return;
+        }
+
+        snapshot.forEach(docSnap => {
+          const data = docSnap.data();
+          const id = docSnap.id;
+
+          const li = document.createElement("li");
+          li.textContent = `${data.dia} de ${data.mes} de ${data.ano}`;
+
+          const btnRemover = document.createElement("button");
+          btnRemover.textContent = "Desreservar";
+          btnRemover.style.marginLeft = "10px";
+
+          btnRemover.addEventListener("click", async () => {
+            const ok = confirm(
+              `Desreservar ${data.dia} de ${data.mes} de ${data.ano}?`
+            );
+            if (!ok) return;
+
+            await deleteDoc(doc(db, "diasReservados", id));
+          });
+
+          li.appendChild(btnRemover);
+          listaReservas.appendChild(li);
+        });
+      });
+    }
+
+    /* ================= LOGIN ================= */
+
+    btnLogin.addEventListener("click", () => {
+      const senha = document.getElementById("senha").value;
+
+      if (senha === senhaAdmin) {
+        loginArea.style.display = "none";
+        adminArea.style.display = "block";
+        msgErro.style.display = "none";
+        iniciarListenerReservas();
+      } else {
+        msgErro.style.display = "block";
+      }
+    });
+
+    /* ================= RESETAR TUDO ================= */
+
+    btnResetar.addEventListener("click", async () => {
+      const ok = confirm("Tem certeza que deseja remover TODAS as reservas?");
+      if (!ok) return;
+
+      const snapshot = await getDocs(reservasRef);
+      const promises = [];
+
+      snapshot.forEach(docSnap => {
+        promises.push(deleteDoc(doc(db, "diasReservados", docSnap.id)));
+      });
+
+      await Promise.all(promises);
+    });
+
+  </script>
+
+</body>
+</html>

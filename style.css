@@ -14,13 +14,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #12DBBC;
     color: #386886;
-    margin: auto;
-    text-align: center;
 }
 
 h1 {
     font-size: 3em;
+    text-align: center;
     font-family: 'Organical', cursive;
+}
+
+span#admin > a {
+    text-decoration: none;
+    color: #10b098;
+}
+
+main {
+    margin: auto;
+    text-align: center;
 }
 
 main abbr > a {
@@ -35,6 +44,19 @@ main abbr {
 main a:hover {
     color: aliceblue;
     text-decoration: underline;
+}
+
+.alugado {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+span.reservado {
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
 td {
@@ -55,14 +77,35 @@ caption {
 
 img {
     border: 3px solid #355C56;
-    border-collapse: collapse;
-    height: 25vh;
-    width: 20vw;
+    display: inline-block;
+    height: 40vh;
+    width: 30vw;
+    
 }
 
 div.img {
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+}
+
+a.celular {
+    background-color: #DBB012;
+    border-radius: 50px;
+    color: aliceblue;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+a.celular:hover {
+    background-color: #c9a628;
+    text-decoration: none;
+    color: rgb(231, 230, 230);
+}
+
+#celular:active {
+    box-shadow: inset -1px -1px 3px 3px rgb(73, 71, 71);
+     color: rgb(209, 209, 209);
+    background-image: linear-gradient(to left, #bda037 25%, #c9a628);
 }
 
 td:hover {
@@ -142,6 +185,7 @@ span#p {
 
 #saber:hover {
     background-color: #c9a628;
+    text-decoration: none;
     color: rgb(231, 230, 230);
 }
 
@@ -162,8 +206,13 @@ table#meses {
     height: 150px;
 }
 
-tbody, thead {
+tbody, thead, tfoot {
     border: 3px solid #355C56;
+}
+
+tfoot th {
+    text-align: justify;
+    padding-left: 5px;
 }
 
 main p#whats {

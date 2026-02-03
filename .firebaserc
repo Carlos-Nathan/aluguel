@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "aluguel-chacara-saosebastiao",
+    "prod": "aluguel-chacara-saosebastiao"
+  },
+  "targets": {},
+  "etags": {}
+}
