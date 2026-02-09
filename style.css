@@ -160,6 +160,7 @@ aside {
     border-radius: 3px;
     text-indent: 6px;
     margin: auto;
+    min-width: 300px;
     max-width: 1000px;
     padding-bottom: 20px;
 }
@@ -229,7 +230,8 @@ main p#whats {
     color: aliceblue;
     border: 5px solid #386886;
     outline: 8px solid #128EDB;
-    width: 60vw;
+    min-width: 250px;
+    max-width: 600px;
     margin: auto;
     margin-bottom: 40px;
     text-align: justify;
@@ -258,8 +260,7 @@ p#whats > span {
     padding: 10px;
     border-radius: 10px;
     background-color: #386886;
-    min-width: 250px;
-    max-width: 400px;
+    width: 60%;
     transform: translate(-45%, -50%);
 }
 
