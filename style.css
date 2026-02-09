@@ -64,8 +64,8 @@ td {
     font-size: 17px;
     border: 1px dashed #355C56;
     height: 40px;
-    padding-left: 0,5vw;
-    padding-right: 0,5vw;
+    padding-left: 8px;
+    padding-right: 8px;
     text-align: center;
 }
 
@@ -203,7 +203,7 @@ table {
 }
 
 table#meses {
-    width: 50vw;
+    width: 80%;
     height: 150px;
 }
 
@@ -236,6 +236,11 @@ main p#whats {
     margin-bottom: 40px;
     text-align: justify;
     border-radius: 0px 0px 20px 20px;
+}
+
+div#rolagem {
+    overflow-x: auto;
+    margin: auto;
 }
 
 div#atencao {
